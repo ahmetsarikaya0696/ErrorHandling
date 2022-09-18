@@ -1,0 +1,9 @@
+﻿@{
+    Exception ex = ViewData["exception"] as Exception;
+    ViewData["Title"] = "Error2";
+}
+
+<h1>Error2</h1>
+<h2>Error Message : @(ex != null ? ex.Message : "")</h2>
+<h3>Error Page : @(ViewData["Url"].ToString() == "/" ? "/Home/Index" : ViewData["Url"])</h3>
+
